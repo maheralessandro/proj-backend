@@ -11,7 +11,7 @@ require('dotenv').config();
 
 let port =  process.env.PORT ;
 connectDB() ;
-app.use(cors({origin:'http://localhost:3000'})) ;
+app.use(cors({origin:'https://echri-vjv2.onrender.com', credentials:true})) ;
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json()) ;
